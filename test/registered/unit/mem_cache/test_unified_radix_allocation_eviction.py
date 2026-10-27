@@ -28,6 +28,7 @@ class TestUnifiedRadixAllocationEviction(CustomTestCase):
         cache.disable = False
         cache.tree_components = (ComponentType.FULL, ComponentType.MAMBA)
         cache.is_swa_enabled = False
+        cache.evicts_by_joint_lru = False
         cache.cache_controller = None
         cache.metrics_collector = None
         cache.tree_core = MagicMock()
