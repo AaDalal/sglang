@@ -2767,7 +2767,9 @@ class TokenizerManager(TokenizerControlMixin, TokenizerManagerScoreMixin):
                     )
                     meta_info.update(
                         state.time_stats.convert_to_output_meta_info(
-                            scheduler_time_stats, completion_tokens
+                            scheduler_time_stats,
+                            completion_tokens,
+                            num_retractions=recv_obj.retraction_counts[i],
                         )
                     )
 
